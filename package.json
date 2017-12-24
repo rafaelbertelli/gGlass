@@ -20,5 +20,13 @@
   "dependencies": {
     "sass": "^1.0.0-beta.4"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "gulp-concat": "^2.6.1",
+    "gulp-install": "^1.1.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "jshint": "^2.9.5"
+  }
 }
