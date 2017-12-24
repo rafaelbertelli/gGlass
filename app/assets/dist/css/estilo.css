@@ -390,8 +390,16 @@ template {
   display: none; }
 
 /** FORM **/
-/** FOTOS **/
-/** MEDIA **/
-/** SPECS **/
+.formulario {
+  display: flex; }
 
-/*# sourceMappingURL=estilo.css.map */
+/** FOTOS **/
+.fotos {
+  display: flex;
+  margin: 0 auto; }
+
+/** MEDIA **/
+.media {
+  display: inline-block; }
+
+/** SPECS **/

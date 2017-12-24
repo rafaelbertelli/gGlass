@@ -5,5 +5,5 @@ A project to study the base of web
 
 - Execute only sass running `npm run sass`
 
-
+- Execute Gulp running `gulp`
  

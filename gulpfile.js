@@ -28,7 +28,7 @@ gulp.task('sass', function() {
 gulp.task('scripts', function() {
 	return gulp.src('app/assets/js/*.js')
 			.pipe(concat('all.js'))
-			.pipe(gulp.dest('app/assets/dist'))
+			.pipe(gulp.dest('app/assets/dist/js'))
 			.pipe(rename('all.min.js'))
 			.pipe(uglify())
 			.pipe(gulp.dest('app/assets/dist/js'));
@@ -37,7 +37,7 @@ gulp.task('scripts', function() {
 // Watch Files For Changes
 gulp.task('watch', function() {
 	gulp.watch('app/assets/js/*.js', ['lint', 'scripts']);
-	gulp.watch('app/assets/css/scss/*.scss', ['sass']);
+	gulp.watch('app/assets/css/scss/**/*.scss', ['sass']);
 });
 
 // Default Task
