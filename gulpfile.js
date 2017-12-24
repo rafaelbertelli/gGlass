@@ -1,4 +1,3 @@
-// Include gulp
 const gulp = require('gulp');
 
 // Include Plugins

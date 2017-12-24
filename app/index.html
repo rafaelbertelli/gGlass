@@ -6,6 +6,7 @@
 		<title>Google Glass</title>
 		<meta name="description" content="Google Glass">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="./assets/dist/css/estilo.css">
 	</head>
 	<body>
 		<header id="cabecalho">
@@ -13,17 +14,23 @@
 				<h1>Google Glass</h1>
 				<h2>A revolução do Google está chegando</h2>
 			</hgroup>
-			<img src="./assets/images/glass-oculos-preto-peq.png" alt="Imagem do Google Glass">
-			
-			Menu Principal
-			- Home
-			- Especificações
-			- Fotos
-			- Multimídia
-			- Fale conosco
 
+			<img src="./assets/images/glass-oculos-preto-peq.png" alt="Imagem do Google Glass">
+
+			<nav id="menu-principal">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="specs.html">Especificações</a></li>
+					<li><a href="fotos.html">Fotos</a></li>
+					<li><a href="multimidia.html">Multimídia</a></li>
+					<li><a href="fale-conosco.html">Fale conosco</a></li>
+				</ul>
+			</nav>
 		</header>
 
+		<hgroup>
+
+		</hgroup>
 		Tecnologia > Inovações
 		Saiba tudo sobre o Google Glass
 		por Gustavo Guanabara
@@ -32,7 +39,13 @@
 		<h1>O que é</h1>
 		<p>O <u>Google Glass</u> é um acessório em forma de <i>óculos</i> que possibilita a interação dos usuários com diversos conteúdos em realidade aumentada. Também chamado de <em>Project Glass</em>, o eletrônico é capaz de tirar fotos a partir de comandos de voz, enviar mensagens instantâneas e realizar ví&shy;deo&shy;con&shy;fe&shy;rên&shy;cias. Seu lançamento está previsto para 2014, e seu preço deve ser de US$ 1,5 mil. Atualmente o Google Glass encontra-se em fase de testes e já possui um vídeo totalmente gravado com o dispositivo. Além disso, a companhia de buscas registrou novas patentes anti-furto e de desbloqueio de tela para o acessório.</p>
 
-		[AQUI ENTRA UMA FOTO]
+		<figure class="foto-legenda">
+			<img class="img" src="./assets/images/glass-quadro-homem-mulher.jpg" alt="Diversão com Google Glass">
+			<figcaption>
+				<h3>Google Glass</h3>
+				<p>Uma nova maneira de ver o mundo</p>
+			</figcaption>
+		</figure>
 
 		<h1>Data de lançamento</h1>
 		<p>Não há uma data específica e oficial para o dispositivo ser lançado, ainda. Pode ser que ele esteja disponível em demonstrações a partir de 2013, mas seu lançamento para as lojas fica para, pelo menos, 2014.</p>
@@ -76,7 +89,9 @@
 			&larr;
 			&rarr;
 		</footer>
-		
+
+		<!-- <script src="./assets/dist/js/all.min.js"></script> -->
+		<script src="./assets/dist/js/all.js"></script>
 	</body>
 </html>
 

@@ -1,0 +1,16 @@
+/** PRINCIPAL **/
+
+body {
+	width: 1280px;
+	margin: 0 auto;
+	height: 100%;
+	background: lighten($bg-color, 90%);
+
+	p {
+		@include texto-principal($txt-principal);
+	}
+}
+
+.img {
+	max-width: 100%;
+}

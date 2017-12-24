@@ -1,4 +1,14 @@
 // MIXINS
-@mixin borda-sombreada {
+@mixin borda-sombreada($cor-secundaria) {
 	box-shadow: 1px 1px 1px $cor-secundaria;
+}
+
+@mixin texto-principal($txt-principal) {
+	color: $txt-principal;
+	text-align: justify;
+	text-indent: 50px;
+	font-size: 16px;
+	line-height: 20px;
+	text-shadow: 2px 1px 2px lighten($txt-principal, 80%);
+
 }

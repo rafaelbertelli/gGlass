@@ -1,3 +1,3 @@
-function myFunction() {
-	alert('hello world');
+function audio() {
+	alert('hello gulp');
 }

@@ -1,0 +1,18 @@
+/** PRINCIPAL **/
+body {
+  width: 1280px;
+  margin: 0 auto;
+  height: 100%; }
+  body p {
+    color: #000;
+    text-align: justify;
+    text-indent: 50px;
+    font-size: 16px;
+    line-height: 20px;
+    text-shadow: 2px 1px 2px #cccccc;
+    color: red;
+    font-size: 35px;
+    color: red; }
+
+.img {
+  max-width: 100%; }
