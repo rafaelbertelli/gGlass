@@ -1,0 +1,4 @@
+// MIXINS
+@mixin borda-sombreada {
+	box-shadow: 1px 1px 1px $cor-secundaria;
+}

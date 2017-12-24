@@ -1,0 +1,24 @@
+{
+  "name": "gglass",
+  "version": "1.0.0",
+  "description": "A project to study the base of web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass -w app/assets/css/scss/estilo.scss:app/assets/css/estilo.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaelbertelli/gGlass.git"
+  },
+  "author": "Rafael Bertelli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafaelbertelli/gGlass/issues"
+  },
+  "homepage": "https://github.com/rafaelbertelli/gGlass#readme",
+  "dependencies": {
+    "sass": "^1.0.0-beta.4"
+  },
+  "devDependencies": {}
+}
