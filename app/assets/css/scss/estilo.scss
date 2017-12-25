@@ -7,11 +7,12 @@
 // @import 'layout/media';
 // @import 'layout/specs';
 
-// VARIAVEIS DE CORES
+// VARIAVEIS
 $bg-color: #000;
 $txt-cor-principal: #000;
-$cor-padrao: #ececec;
-$txt-cor-secundaria: #adad;
+$txt-cor-secundaria: #ff9999;
+
+$fonte-padrao: sans-serif;
 // ============================================================================================================================================================
 
 // MIXINS
@@ -23,7 +24,7 @@ $txt-cor-secundaria: #adad;
 	font-family: sans-serif;
 	color: $cor;
 	text-indent: 50px;
-	font-size: 16px;
+	font-size: 1rem;
 	line-height: 20px;
 	text-align: justify;
 }
@@ -36,11 +37,10 @@ $txt-cor-secundaria: #adad;
 
 /** PRINCIPAL **/
 body {
-	width: 1280px;
-	margin: 0 auto;
-	height: 100%;
-	// background: lighten($bg-color, 90%);
-
+	font-family: $fonte-padrao;
+	color: $txt-cor-principal;
+	background: lighten($bg-color, 90%);
+	
 	p {
 		@include texto-principal($txt-cor-principal);
 		// @include shadow-texto-principal($txt-cor-principal);
@@ -48,6 +48,18 @@ body {
 	}
 }
 
+#interface {
+	width: 1280px;
+	margin: 0px auto 50px;
+	height: 100%;
+	padding: 10px 50px;
+	box-sizing: border-box;
+	background: lighten($bg-color, 100%);
+	box-shadow: 1px 1px 10px lighten($txt-cor-principal, 50%);
+}
+
+
+/** IMAGENS **/
 .img {
 	width: 100%;
 	height: 100%;
@@ -79,6 +91,52 @@ body {
 			
 		}
 
+	}
+}
+
+/** HEADER **/
+#cabecalho {
+	position: relative;
+
+	#icone {
+    position: absolute;
+    top: 35px;
+    right: -80px;
+	}
+}
+
+#menu-principal {
+	ul {
+		position: absolute;
+		right: 0px;
+		top: -47px;
+		padding: 0;
+		text-transform: uppercase;
+		list-style: none;
+	}
+	li {
+		display: inline-block;
+		padding: 10px 0;
+		background: lighten($txt-cor-principal, 80%);
+		box-shadow: 1px 1px 4px lighten($txt-cor-principal, 70%);
+		
+		&:last-child {
+			margin-right: 0;
+		}
+		
+	}
+	
+	a {
+		text-decoration: none;
+		color: $txt-cor-principal;
+		font-weight: 500;
+		padding: 10px;
+		transition: background 0.2s;
+		
+		&:hover {
+			background: lighten($txt-cor-principal, 70%);
+			color: lighten($txt-cor-principal, 100%);
+		}
 	}
 }
 
