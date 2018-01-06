@@ -6,6 +6,7 @@
  * 2. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 html {
   line-height: 1.15;
   /* 1 */
@@ -390,10 +391,15 @@ template {
   display: none; }
 
 /** PRINCIPAL **/
+@font-face {
+  font-family: 'FonteLogo';
+  src: url("../../fonts/bubblegum-sans-regular.otf"); }
+
 body {
   font-family: sans-serif;
   color: #000;
-  background: #e6e6e6; }
+  background: #e6e6e6;
+  height: 100%; }
   body p {
     font-family: sans-serif;
     color: #000;
@@ -418,6 +424,7 @@ body {
 
 .foto-legenda {
   border: 8px solid white;
+  border-bottom: 4px solid white;
   display: inline-block;
   position: relative;
   box-shadow: 1px 1px 4px #666666; }
@@ -443,11 +450,25 @@ body {
 
 /** HEADER **/
 #cabecalho {
-  position: relative; }
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  height: 130px;
+  background: url("../../images/glass-logo-peq.jpg") no-repeat left bottom; }
   #cabecalho #icone {
     position: absolute;
-    top: 35px;
+    top: 42px;
     right: -80px; }
+  #cabecalho h1 {
+    font-family: 'FonteLogo', sans-serif;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    margin-bottom: 0; }
+  #cabecalho h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #888888;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    margin-top: 10px;
+    margin-bottom: 10px; }
 
 #menu-principal ul {
   position: absolute;
@@ -474,3 +495,60 @@ body {
   #menu-principal a:hover {
     background: #b3b3b3;
     color: white; }
+
+/** SECTION **/
+#main {
+  width: 50%;
+  float: left;
+  padding: 10px 10px 10px 0;
+  box-sizing: border-box;
+  border-right: 1px solid rgba(0, 0, 0, 0.2); }
+
+/** TABLE **/
+#tab-specs {
+  border-spacing: 0;
+  margin-left: auto;
+  margin-right: auto; }
+  #tab-specs caption {
+    color: #888888;
+    font-size: 10pt;
+    font-weight: 600; }
+    #tab-specs caption span {
+      float: right;
+      font-size: 7pt;
+      margin-top: 8px; }
+  #tab-specs td {
+    border-bottom: 1px solid #606060;
+    padding: 10px; }
+    #tab-specs td.ce {
+      font-weight: 600;
+      color: #FFFFFF;
+      background: #606060;
+      text-align: right;
+      vertical-align: top; }
+    #tab-specs td.cd {
+      color: #FFFFFF;
+      background: #888888; }
+
+/** ASIDE **/
+#aside {
+  width: 49%;
+  float: right;
+  padding: 10px 0;
+  box-sizing: border-box; }
+
+/** FOOTER **/
+#footer {
+  clear: both;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding-top: 25px; }
+  #footer span {
+    display: inline-block;
+    width: 100%;
+    font-size: 12px; }
+  #footer a {
+    color: #6495ed;
+    text-decoration: none; }
+    #footer a:hover {
+      color: #185bd3; }
