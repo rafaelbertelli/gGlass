@@ -1,0 +1,19 @@
+// MIXINS
+@mixin borda-img($cor) {
+	box-shadow: 1px 1px 4px $cor;
+}
+
+@mixin texto-principal($cor) {
+	font-family: sans-serif;
+	color: $cor;
+	text-indent: 50px;
+	font-size: 1rem;
+	line-height: 20px;
+	text-align: justify;
+}
+
+@mixin shadow-texto-principal($cor) {
+	text-shadow: 2px 1px 2px lighten($cor, 80%);
+	
+}
+// ============================================================================================================================================================
