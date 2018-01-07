@@ -1,3 +1,31 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@font-face {
+  font-family: 'FonteLogo';
+  src: url("../../fonts/bubblegum-sans-regular.otf");
+}
+
+body {
+  font-family: sans-serif;
+}
+
+#cabecalho h1, #cabecalho-artigo h1, #aside h1 {
+  font-family: FonteLogo, sans-serif;
+}
+
+#cabecalho h2 {
+  font-family: "Roboto", sans-serif;
+}
+
+#noticia-principal h2, #aside h2 {
+  font-size: 12pt;
+  color: #606060;
+  background: #dddddd;
+  padding: 5px 10px;
+  margin: 10px 0;
+  box-shadow: 2px 2px 8px #dddddd;
+  border-radius: 2px;
+}
+
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -6,7 +34,6 @@
  * 2. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
-@import url("https://fonts.googleapis.com/css?family=Roboto");
 html {
   line-height: 1.15;
   /* 1 */
@@ -434,13 +461,7 @@ template {
 }
 
 /** PRINCIPAL **/
-@font-face {
-  font-family: 'FonteLogo';
-  src: url("../../fonts/bubblegum-sans-regular.otf");
-}
-
 body {
-  font-family: sans-serif;
   color: #000;
   background: #e6e6e6;
   height: 100%;
@@ -463,6 +484,66 @@ body p {
   box-sizing: border-box;
   background: white;
   box-shadow: 1px 1px 10px gray;
+}
+
+/** HEADER **/
+#cabecalho {
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  height: 130px;
+  background: url("../../images/glass-logo-peq.jpg") no-repeat left bottom;
+}
+
+#cabecalho #icone {
+  position: absolute;
+  top: 42px;
+  right: -80px;
+}
+
+#cabecalho h1 {
+  color: #606060;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+  margin-bottom: 0;
+}
+
+#cabecalho h2 {
+  color: #888888;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#menu-principal ul {
+  position: absolute;
+  right: 0px;
+  top: -47px;
+  padding: 0;
+  text-transform: uppercase;
+  list-style: none;
+}
+
+#menu-principal li {
+  display: inline-block;
+  padding: 10px 0;
+  background: #cccccc;
+  box-shadow: 1px 1px 4px #b3b3b3;
+}
+
+#menu-principal li:last-child {
+  margin-right: 0;
+}
+
+#menu-principal a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  padding: 10px;
+  transition: background 0.2s;
+}
+
+#menu-principal a:hover {
+  background: #b3b3b3;
+  color: white;
 }
 
 /** IMAGENS **/
@@ -502,68 +583,6 @@ body p {
   font-size: 1rem;
   line-height: 20px;
   text-align: justify;
-}
-
-/** HEADER **/
-#cabecalho {
-  position: relative;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  height: 130px;
-  background: url("../../images/glass-logo-peq.jpg") no-repeat left bottom;
-}
-
-#cabecalho #icone {
-  position: absolute;
-  top: 42px;
-  right: -80px;
-}
-
-#cabecalho h1 {
-  font-family: 'FonteLogo', sans-serif;
-  color: #606060;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
-  margin-bottom: 0;
-}
-
-#cabecalho h2 {
-  font-family: 'Roboto', sans-serif;
-  color: #888888;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-#menu-principal ul {
-  position: absolute;
-  right: 0px;
-  top: -47px;
-  padding: 0;
-  text-transform: uppercase;
-  list-style: none;
-}
-
-#menu-principal li {
-  display: inline-block;
-  padding: 10px 0;
-  background: #cccccc;
-  box-shadow: 1px 1px 4px #b3b3b3;
-}
-
-#menu-principal li:last-child {
-  margin-right: 0;
-}
-
-#menu-principal a {
-  text-decoration: none;
-  color: #000;
-  font-weight: 500;
-  padding: 10px;
-  transition: background 0.2s;
-}
-
-#menu-principal a:hover {
-  background: #b3b3b3;
-  color: white;
 }
 
 /** SECTION **/
@@ -612,12 +631,49 @@ body p {
   background: #888888;
 }
 
+/** ARTICLE **/
+#cabecalho-artigo h1 {
+  font-size: 20pt;
+  color: #606060;
+}
+
+#cabecalho-artigo h2 {
+  font-size: 12pt;
+  color: #adadad;
+  margin: 0;
+}
+
+#cabecalho-artigo h3 {
+  font-size: 10pt;
+}
+
+#cabecalho-artigo .cabecalho-artigo__direita {
+  float: right;
+}
+
+#noticia-principal {
+  clear: both;
+}
+
 /** ASIDE **/
 #aside {
   width: 49%;
   float: right;
-  padding: 10px 0;
+  padding: 0 10px;
   box-sizing: border-box;
+  background: #eaeaea;
+  margin-top: 12px;
+  border-radius: 5px;
+  box-shadow: 3px 4px 8px #848484;
+}
+
+#aside h1 {
+  font-size: 20pt;
+}
+
+#aside h2 {
+  color: white;
+  background: #aaaaaa;
 }
 
 /** FOOTER **/

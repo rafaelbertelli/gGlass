@@ -1,0 +1,71 @@
+// FONTS
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@font-face {
+	font-family: 'FonteLogo';
+	src: url($fonte-logo);
+}
+// ============================================================================================================================================================
+
+// MIXINS
+	// How to use
+		// @mixin border-radius($radius) {
+		//   -webkit-border-radius: $radius;
+		//      -moz-border-radius: $radius;
+		//       -ms-border-radius: $radius;
+		//           border-radius: $radius;
+		// }
+		// .box { @include border-radius(10px); }
+
+@mixin borda-img($cor) {
+	box-shadow: 1px 1px 4px $cor;
+}
+
+@mixin texto-principal($cor) {
+	font-family: sans-serif;
+	color: $cor;
+	text-indent: 50px;
+	font-size: 1rem;
+	line-height: 20px;
+	text-align: justify;
+}
+
+@mixin shadow-texto-principal($cor) {
+	text-shadow: 2px 1px 2px lighten($cor, 80%);
+	
+}
+// ============================================================================================================================================================
+
+// EXTENDS
+	// How to use
+	// This CSS will print because %message-shared is extended.
+		// %message-shared {
+		//   border: 1px solid #ccc;
+		//   padding: 10px;
+		//   color: #333;
+		// }
+		// .message {
+		//   @extend %message-shared;
+		// }
+
+%fonte-padrao {
+	font-family: sans-serif;
+}
+
+%fonte-logo {
+	font-family: FonteLogo, sans-serif;
+}
+
+%fonte-roboto {
+	font-family: "Roboto", sans-serif;
+}
+
+%title-bg {
+	font-size: 12pt;
+	color: $txt-h-article;
+	background: $bg-h-article;
+	padding: 5px 10px;
+	margin: 10px 0;
+	box-shadow: 2px 2px 8px $bg-h-article;
+	border-radius: 2px;
+}
+

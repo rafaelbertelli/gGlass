@@ -15,13 +15,15 @@ const cssRename				= 'estilo';													// Rename output file name
 
 gulp.task('sassdev', function() { // SASS task compiles any of our Sass files in our scss/ directory into CSS and saves the compiled CSS file in our dist/css directory.
 	return gulp.src(scssFiles)
+			.pipe(wait(1000))
 			.pipe(sass(sassDevOptions).on('error', sass.logError))
 			.pipe(rename(cssRename + ".css"))
 			.pipe(gulp.dest(cssDest));
 });
 
 gulp.task('sassprod', function() {
-  return gulp.src(scssFiles)
+	return gulp.src(scssFiles)
+		.pipe(wait(1000))
 		.pipe(sass(sassProdOptions).on('error', sass.logError))
 		.pipe(uncomment({ all: true }))
 		.pipe(rename(cssRename + ".min.css"))

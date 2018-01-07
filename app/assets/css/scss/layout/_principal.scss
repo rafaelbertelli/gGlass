@@ -1,20 +1,12 @@
 /** PRINCIPAL **/
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-@font-face {
-	font-family: 'FonteLogo';
-	src: url($fonte-logo);
-}
-
 body {
-	font-family: $fonte-padrao;
+	@extend %fonte-padrao;
 	color: $txt-cor-principal;
 	background: lighten($bg-color, 90%);
 	height: 100%;
-	
+
 	p {
 		@include texto-principal($txt-cor-principal);
-		// @include shadow-texto-principal($txt-cor-principal);
-		
 	}
 }
 
@@ -26,6 +18,71 @@ body {
 	box-sizing: border-box;
 	background: lighten($bg-color, 100%);
 	box-shadow: 1px 1px 10px lighten($txt-cor-principal, 50%);
+}
+// ============================================================================================================================================================
+
+/** HEADER **/
+#cabecalho {
+	position: relative;
+	border-bottom: 1px solid	rgba($txt-cor-principal, 0.2);
+	height: 130px;
+	background: url($logo-glass-peq) no-repeat left bottom;
+
+	#icone {
+		position: absolute;
+		top: 42px;
+		right: -80px;
+	}
+
+	h1 {
+		@extend %fonte-logo;
+		color: $txt-titulo;
+		text-shadow: 1px 1px 1px rgba($txt-cor-principal, 0.6);
+		margin-bottom: 0;
+	}
+
+	h2 {
+		@extend %fonte-roboto;
+		color: $txt-subtitulo;
+		text-shadow: 1px 1px 1px rgba($txt-cor-principal, 0.6);
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+}
+
+#menu-principal {
+	ul {
+		position: absolute;
+		right: 0px;
+		top: -47px;
+		padding: 0;
+		text-transform: uppercase;
+		list-style: none;
+	}
+	li {
+		display: inline-block;
+		padding: 10px 0;
+		background: lighten($txt-cor-principal, 80%);
+		box-shadow: 1px 1px 4px lighten($txt-cor-principal, 70%);
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+	}
+
+	a {
+		text-decoration: none;
+		color: $txt-cor-principal;
+		font-weight: 500;
+		padding: 10px;
+		transition: background 0.2s;
+
+		&:hover {
+			background: lighten($txt-cor-principal, 70%);
+			color: lighten($txt-cor-principal, 100%);
+		}
+	}
 }
 // ============================================================================================================================================================
 
@@ -59,74 +116,6 @@ body {
 
 		p {
 			@include texto-principal(lighten($txt-cor-principal, 100%));
-			
-		}
-
-	}
-}
-// ============================================================================================================================================================
-
-/** HEADER **/
-#cabecalho {
-	position: relative;
-	border-bottom: 1px solid	rgba($txt-cor-principal, 0.2);
-	height: 130px;
-	background: url($logo-glass-peq) no-repeat left bottom;
-
-	#icone {
-    position: absolute;
-    top: 42px;
-    right: -80px;
-	}
-
-	h1 {
-		font-family: 'FonteLogo', sans-serif;
-		color: $txt-titulo;
-		text-shadow: 1px 1px 1px rgba($txt-cor-principal, 0.6);
-    margin-bottom: 0;
-	}
-
-	h2 {
-		// font-family: Arial, Helvetica, sans-serif;
-		font-family: 'Roboto', sans-serif;
-		color: $txt-subtitulo;
-		text-shadow: 1px 1px 1px rgba($txt-cor-principal, 0.6);
-		margin-top: 10px;
-		margin-bottom: 10px;
-	}
-}
-
-#menu-principal {
-	ul {
-		position: absolute;
-		right: 0px;
-		top: -47px;
-		padding: 0;
-		text-transform: uppercase;
-		list-style: none;
-	}
-	li {
-		display: inline-block;
-		padding: 10px 0;
-		background: lighten($txt-cor-principal, 80%);
-		box-shadow: 1px 1px 4px lighten($txt-cor-principal, 70%);
-		
-		&:last-child {
-			margin-right: 0;
-		}
-		
-	}
-	
-	a {
-		text-decoration: none;
-		color: $txt-cor-principal;
-		font-weight: 500;
-		padding: 10px;
-		transition: background 0.2s;
-		
-		&:hover {
-			background: lighten($txt-cor-principal, 70%);
-			color: lighten($txt-cor-principal, 100%);
 		}
 	}
 }
@@ -180,12 +169,55 @@ body {
 }
 // ============================================================================================================================================================
 
+/** ARTICLE **/
+#cabecalho-artigo {
+	h1 {
+		@extend %fonte-logo;
+		font-size: 20pt;
+		color: $txt-h-article;
+	}
+	h2 {
+		font-size: 12pt;
+		color: lighten($txt-h-article, 30);
+		margin: 0;
+	}
+	h3 {
+		font-size: 10pt;
+
+	}
+	.cabecalho-artigo__direita {
+		float: right;
+
+	}
+}
+#noticia-principal {
+	clear: both;
+	h2 {
+		@extend %title-bg;
+	}
+}
+// ============================================================================================================================================================
+
 /** ASIDE **/
 #aside {
 	width: 49%;
 	float: right;
-	padding: 10px 0;
+	padding: 0 10px;
 	box-sizing: border-box;
+	background: lighten($bg-h-article, 5);
+	margin-top: 12px;
+	border-radius: 5px;
+	box-shadow: 3px 4px 8px darken($bg-h-article, 35);
+
+	h1 {
+		@extend %fonte-logo;
+		font-size: 20pt;
+	}
+	h2 {
+		@extend %title-bg;
+		color: lighten($txt-h-article, 100);
+		background: darken($bg-h-article, 20);
+	}
 }
 // ============================================================================================================================================================
 
@@ -205,10 +237,9 @@ body {
 	a {
 		color: $link-footer;
 		text-decoration: none;
-		
+
 		&:hover {
 			color: darken($link-footer, 20);
 		}
-
 	}
 }
